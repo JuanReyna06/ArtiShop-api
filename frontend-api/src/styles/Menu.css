@@ -1,0 +1,23 @@
+.nav-var{
+    background-color: rgb(246, 198, 76);
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+.nav__list{
+    margin:0;
+    margin-bottom: 10px;
+}
+
+.nav__item {
+    display: inline-block;
+     padding:25px;
+}
+.nav__item:hover{
+    background-color: rgb(225, 165, 12)
+}
+
+.nav__link {
+    color: #1b1b1b;
+    text-decoration: none
+}
