@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import '../App.css'
 
+
 function Inicio() {
  const navigate = useNavigate();
 
@@ -17,7 +18,7 @@ function Inicio() {
           <p className='card__description'>
             Frontend: React, Vite, Css, Html.
           </p>
-          <button className='card__button' onClick={()=> navigate('/categorias')}>Ir a la tienda</button>
+          <button className='card__button' onClick={()=> navigate('/articulos')}>Ir a la tienda</button>
       </div>
     </>
   )

@@ -1,35 +1,154 @@
-html{
-  background-color: rgb(73, 73, 73);
-
+html, body, #root {
+  height: 100%;
+  margin: 0;
 }
-.card { 
+
+body {
+  background-color: #515151;
+  font-family: sans-serif
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.main-content {
+  flex: 1 !important; /* Empuja el footer abajo */
+}
+
+/* ---- Menu.jsx ---- */
+.header{
+    min-height: 15vh;
+    background-image: url('./assets/maison-rouge-1814191.jpg');
+    box-sizing: border-box;
+    background-size:cover;
+    background-position: center;   
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.header__overlay{
+    min-height: 15vh;
+    width: 100%;
+    background-color: #0008;
+    position: absolute;
+    z-index: 1  ;
+}
+.header__content{
+    position: relative;
+    z-index: 10;
+    margin: auto;
+    text-align: center;
+}
+.header__title{
+    margin:0;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: rgb(184, 148, 57);
+}
+.nav-var{
+   display: flex;
+    background-color: rgb(246, 198, 76);
+    justify-content: space-between ;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    position: sticky;
+    top: 0px;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.9);
+}
+.nav__list{
+     margin:0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav__item {
+  list-style: none; 
+  display: inline-block;
+}
+
+.nav__link {
+  color:black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 6px;
+    border-radius: 20px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+.nav__link:hover{
+    background-color: #1c1b1b;
+    color: rgb(246, 198, 76);
+    border-radius: 20px;
+}
+
+/* ----- Footer.jsx ---- */
+.footer {
+  background-color: #1c1b1b;
+  color: rgb(246, 198, 76);
+  padding: 15px 20px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  
+}
+
+.footer__phone {
+  margin-right: 30px; /* separa el teléfono de las redes */
+  color: rgb(246, 198, 76);
+  text-decoration: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer__link img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer__link img:hover, .footer__phone:hover {
+  transform: scale(1.2);
+  filter: brightness(1.3);
+}
+
+/* ---- Inicio.jsx ----*/
+.card {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   background-color:rgb(246, 198, 76);
-  width: 55%;
+  min-width: 100%;
   padding: 20px 30px;
-  margin-top: 10%;
-  margin-left: 10px;
-  font-family:Arial, Helvetica, sans-serif;
   border-radius: 15px;
   box-shadow: 0px 0px 30px 0px rgba(13, 13, 13, 0.8);
-}
-
-.card h1{
+  margin-top: 10px;
+} 
+ 
+.card__title{
   letter-spacing: 5px;
   font-size: 40px;
 
 }
 
-.card button{
+.card__button{
+
   background-color: black;
   color:rgb(246, 198, 76);
-  border-style: solid;
-  border-width : 2px;
+  border: 2px solid rgb(0, 0, 0);
   padding: 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 15px;
   margin-top: 20px;
+  width: 150px;
 }
 
 .card button:hover{
@@ -38,44 +157,135 @@ html{
   color:rgb(255, 255, 255);
 }
 
-.tituloTabla {
+/*--- Categoria.jsx ---*/
+
+.title__table {
   font-family: sans-serif;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 900;
   letter-spacing: 10px;
   text-transform: uppercase;
-  border-color: rgb(11, 11, 11);
   padding: 10px 20px;
-  margin-bottom: 2px;
   background-color:rgb(246, 198, 76);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  color: #1c1b1b;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }    
 
 table{
   font-family: sans-serif;
   width: 100%;
   border-collapse: collapse;      
-  box-shadow: 0px 0px 25px rgba(1, 1, 1, 0.5);
-  margin: auto;
-  margin-top: 5px;
+  margin: 0px auto 30px auto;
+  overflow: hidden;
+  border-top: 2px solid #515151;
 }
 
-td,th{
+.table__content{
+  color: #f6c64c;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
   text-align: center;
-  padding: 8px;
-  border-bottom: 1px solid #636262;
-  font-size: 20px;
+}
+
+.table__cell{
+ background-color: rgb(246, 198, 76);
+  color: #1c1b1b;
+  padding: 12px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  font-size: 18px;
   text-transform: uppercase;
 }
 
-td{
-  color:rgb(246, 198, 76);
-  font-weight: 700;
+/* Hover sobre filas */
+.table__body tr:hover td {
+  background-color: #3b3b3b;
+  color: white;
+  transition: background-color 0.3s ease;
 }
 
-th{
-  background-color: rgb(246, 198, 76);
-  border-right: none;
-  letter-spacing: 2px;
-  font-weight: 800;
+/*----- Articulos.jsx ----- */
+.form-container {
+  display: flex;
+  justify-content: center; 
 }
+
+.form{
+   display: flex;
+   flex-direction: column;
+   background-color:rgb(246, 198, 76);
+   width: 100%;
+   margin-top: 10px;
+   text-transform: uppercase;
+   color: #1c1b1b;
+
+
+}
+
+.form__title{
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  margin:0px;
+  padding: 10px 20px;
+}
+
+.form__input-container{ 
+  display: flex;
+  justify-content: baseline;
+  margin: 0px;
+  
+}
+
+.form__input, .form__select{
+  display: flex;
+  flex-direction: column; 
+  width: 100%; 
+  padding: 10px 20px;
+  margin: 0px;
+}
+.form__label{
+  margin:10px;
+  font-weight: 600;
+}
+
+.input,
+.select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #131313;
+  background-color: #131313;
+  color: white;
+
+}
+
+.form__button-container{
+  display: flex;
+  justify-content: flex-start; 
+  padding: 15px;
+  
+}
+
+.form__button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.button__buscar, .button__agregar {
+  background-color: black;
+  color: rgb(246, 198, 76);
+}
+
+.button__buscar:hover, .button__agregar:hover{
+  background-color: rgb(90, 90, 90);
+  border-color: rgb(90, 90, 90);
+  color:rgb(255, 255, 255);
+}
+

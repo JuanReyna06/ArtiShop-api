@@ -1,4 +1,4 @@
-import '../App.css';
+import '../App.css'
 import { getAllCategorias } from '../../services/categoriasServices';
 import { useEffect, useState } from 'react';
 
@@ -13,21 +13,21 @@ function Categorias (){
 
     return(
         <>
-        <div className="tituloTabla">Categorias</div>
+        <div className="title__table">Categorias</div>
         
-        <table className="tabla">
-            <thead className='tablaEncabezado'>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
+        <table className="table">   
+            <thead className='table__head'>
+                    <tr className='table__row'>
+                        <th className='table__cell'>ID</th>
+                        <th className='table__cell'>Nombre</th>
                     </tr>
             </thead>
-            <tbody>
+            <tbody className='table__body'>
                  {categorias &&
                     categorias.map((categoria) => (
-                        <tr key={categoria.IdCategoria}>
-                            <td>{categoria.IdCategoria}</td>
-                            <td>{categoria.Nombre}</td>
+                        <tr key={categoria.IdCategoria} className='table__row'>
+                            <td className='table__content'>{categoria.IdCategoria}</td>
+                            <td className='table__content'>{categoria.Nombre}</td>
                         </tr> ))
                  }
 
