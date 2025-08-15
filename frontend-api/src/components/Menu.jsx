@@ -3,9 +3,9 @@ import '../App.css'
 function Menu(){
     return(
          <>
-         <header class="header">
-             <div class="header__overlay"></div>
-             <div class="header__content">
+         <header className="header">
+             <div className="header__overlay"></div>
+             <div className="header__content">
                  <h1 className='header__title'> Desarollo Software 2025</h1>
              </div>
         </header>   

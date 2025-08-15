@@ -1,17 +1,17 @@
 import Articulo from "../models/articulosModel.js";
 import {Op} from "sequelize";
 
-//buscar articulos por filtro y paginacion
+//buscar articulos por filtro y paginacion (backend)
 async function getAllArticulos(req,res) {
     let where = {};
     // armamos primero los filtros con el where
     if(req.query.Nombre != undefined && req.query.Nombre !== ""){
         where.Nombre = {
-            [Op.like] : "%" + req.query.Nombre+ " %" 
+            [Op.like] : `%${req.query.Nombre}%`
         }
     };
     if(req.query.Activo != undefined && req.query.Activo !== ""){
-        where.Activo = req.query.Activo === true;
+        where.Activo = req.query.Activo === "true";
     }
     // ahora buscamos
     const pagina = req.query.Pagina ?? 1;

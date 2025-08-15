@@ -1,5 +1,5 @@
 import '../App.css'
-import { getAllCategorias } from '../../services/categoriasServices';
+import { getAllCategorias } from '../../services/categoriasServices.js';
 import { useEffect, useState } from 'react';
 
 function Categorias (){

@@ -28,7 +28,7 @@ Articulo.init({
         }
     },
     Precio:{
-        type: DataTypes.DECIMAL(10,2),
+        type: DataTypes.INTEGER,
         allowNull:false,
         validate:{
             notNull:{
@@ -38,7 +38,7 @@ Articulo.init({
         }
     },
     CodigoDeBarra: {
-        type : DataTypes.STRING(13),
+        type : DataTypes.STRING,
         allowNull:false,
         validate:{
             notNull:{

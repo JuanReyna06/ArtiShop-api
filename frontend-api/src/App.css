@@ -76,7 +76,7 @@ body {
     margin: 6px;
     border-radius: 20px;
     transition-property: background-color;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
 }
 
 .nav__link:hover{
@@ -117,6 +117,23 @@ body {
 .footer__link img:hover, .footer__phone:hover {
   transform: scale(1.2);
   filter: brightness(1.3);
+}
+
+.footer__icon {
+  padding: 3px 3px;
+  border-radius: 10px;
+}
+.footer__icon-facebook {
+  background-color: #1666ce;
+}
+.footer__icon-twitter {
+  background-color: #1DA1F2;
+}
+.footer__icon-instagram {
+  background-color: #E1306C;
+}
+.footer__icon-whatsapp {
+  background-color: #25D366;
 }
 
 /* ---- Inicio.jsx ----*/
@@ -207,7 +224,7 @@ table{
   transition: background-color 0.3s ease;
 }
 
-/*----- Articulos.jsx ----- */
+/*----- ArticulosBuscar.jsx ----- */
 .form-container {
   display: flex;
   justify-content: center; 
@@ -221,8 +238,6 @@ table{
    margin-top: 10px;
    text-transform: uppercase;
    color: #1c1b1b;
-
-
 }
 
 .form__title{
@@ -236,7 +251,8 @@ table{
 
 .form__input-container{ 
   display: flex;
-  justify-content: baseline;
+  justify-content: column;
+  gap: 12px;
   margin: 0px;
   
 }
@@ -276,16 +292,161 @@ table{
   border-radius: 10px;
   cursor: pointer;
   margin-left: 10px;
+  font-size:18px;
 }
 
-.button__buscar, .button__agregar {
+.button__buscar, .button__grabar{
   background-color: black;
   color: rgb(246, 198, 76);
+  transition: all 0.3s ease;
+}
+.button__agregar{
+  background-color: #198754;
+  transition: all 0.3s ease;
 }
 
-.button__buscar:hover, .button__agregar:hover{
+.button__buscar:hover, .button__agregar:hover, .button__grabar:hover, .button__volver:hover {
   background-color: rgb(90, 90, 90);
   border-color: rgb(90, 90, 90);
   color:rgb(255, 255, 255);
 }
+
+/*----- ArticulosRegistrar.jsx ----- */
+
+.form__registrar{
+  background-color: rgb(246, 198, 76);
+  color: #1c1b1b;
+
+  border-radius: 15px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+  width: 700px; 
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.button__volver{
+  background-color: #b02a37;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+.alert {
+  background-color: #1c1b1b;
+  color: rgb(246, 198, 76);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form__input-registro{ 
+  display: flex;
+  justify-content: column;
+  margin: 0px;
+  flex-wrap: wrap;
+}
+
+fieldset{
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* ---- ListadoArticulos.jsx ------- */
+
+
+.table__pagination-container {
+  display: flex;
+  justify-content: space-between; /* lo empuja a la derecha */
+  align-items: center;
+  padding: 5px 5px;
+  background-color:  rgb(246, 198, 76); /* fondo oscuro */
+  color: rgb(0, 0, 0); /* texto amarillo */
+  font-family: sans-serif;
+  border-top: 2px solid rgb(246, 198, 76); /* línea superior */
+}
+
+/* Texto de registros */
+.table__pagination-item {
+  font-size: 17px;
+}
+
+/* Select de páginas */
+.table__pagination select {
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: 2px solid #000000;
+  background-color: #000000;
+  color: rgb(246, 198, 76);
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+.table__pagination select:hover {
+  background-color: rgb(90, 90, 90);
+  border-color: rgb(90, 90, 90);
+  color:rgb(255, 255, 255);
+}
+
+.button__form-imprimir {
+  background-color: rgb(45, 114, 203);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button__form-imprimir:hover {
+  background-color: rgb(90, 90, 90);
+  border-color: rgb(90, 90, 90);
+  color:rgb(255, 255, 255);
+}
+
+.table__content--acciones button{
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border: 2px solid rgb(44, 44, 44);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.button__form-consultar{
+  background-color: rgba(52, 152, 219, 0.941);
+}
+.button__form-consultar:hover {
+  background-color: rgba(123, 178, 214, 0.941);
+}
+
+.button__form-modificar {
+  background-color: rgba(240, 153, 13, 0.929);
+}
+.button__form-modificar:hover {
+  background-color: rgba(237, 177, 80, 0.929);
+}
+
+.button__form-activar {
+   background-color: rgb(23, 171, 48);
+}
+.button__form-activar:hover {
+   background-color: rgb(39, 174, 95);
+}
+.button__form-desactivar {
+  background-color: rgb(204, 24, 24);
+}
+.button__form-desactivar:hover {
+  background-color: rgb(196, 75, 75);
+}
+
+
+
+
 

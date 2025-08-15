@@ -4,7 +4,7 @@ import Inicio from './components/Inicio.jsx'
 import Categorias from './components/Categorias.jsx'
 import Menu from './components/Menu.jsx'
 import Footer from './components/Footer.jsx'
-import ArticulosBuscar from './components/ArticulosBuscar.jsx'
+import Articulos from './components/Articulos/Articulos.jsx'
 
 function App() {
  
@@ -18,7 +18,7 @@ function App() {
                   <Routes>
                      <Route path='/inicio' element={<Inicio></Inicio>}></Route>
                      <Route path='/categorias' element={<Categorias></Categorias>}></Route>
-                     <Route path='/articulos' element={<ArticulosBuscar></ArticulosBuscar>}></Route>
+                     <Route path='/articulos' element={<Articulos></Articulos>}></Route>
                      <Route path='*' element={<Navigate to='/inicio'></Navigate>}></Route>
                    </Routes>
                </main>
