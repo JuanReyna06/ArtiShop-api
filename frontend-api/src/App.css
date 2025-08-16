@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+* {
+  box-sizing: border-box;
+}
 html, body, #root {
   height: 100%;
   margin: 0;
+  padding:0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #515151;
-  font-family: sans-serif
+  font-family: "Poppins", sans-serif
 }
 .app {
   display: flex;
@@ -84,6 +90,37 @@ body {
     color: rgb(246, 198, 76);
     border-radius: 20px;
 }
+
+.nav__button {
+  display: inline-block;
+  background-color: #000;               
+  color: rgb(246, 198, 76);             
+  border: 2px solid #000;   
+  padding: 5px 20px;
+  margin: 6px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;  
+  transition: all 0.3s ease;
+}
+
+.nav__button i {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.nav__button:hover {
+  background-color: rgb(90, 90, 90);
+  border-color: rgb(90, 90, 90);
+  color: white;
+}
+
+.item{
+  font-size: 25px;
+}
+
 
 /* ----- Footer.jsx ---- */
 .footer {
@@ -217,7 +254,6 @@ table{
   text-transform: uppercase;
 }
 
-/* Hover sobre filas */
 .table__body tr:hover td {
   background-color: #3b3b3b;
   color: white;
@@ -271,6 +307,7 @@ table{
 
 .input,
 .select {
+  outline: none;
   padding: 8px;
   border-radius: 5px;
   border: 1px solid #131313;
@@ -446,7 +483,98 @@ fieldset{
   background-color: rgb(196, 75, 75);
 }
 
+/*------ Login.jsx ------- */
+/*me sirve mucho la logica */
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(./assets/img/maison-rouge-1814191.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
+.login__container{
+  width: 420px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgb(255,255, 255, .2);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+.login__container h2{
+  text-align: center;
+  font-size: 36px;
+}
+
+.container .input__box{
+ position: relative;
+ width: 100%;
+ height: 50px;
+ margin: 30px 0;
+}
+
+.input__box input{
+  
+  padding: 20px 45px 20px 20px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border:none;
+  outline:none;
+  border : 2px solid rgb(255,255, 255, .2);
+  border-radius: 40px;
+  font-size: 20px;
+  color:#fff;
+}
 
 
+.input__box input::placeholder{
+  color:#fff;
+}
 
+.input__box i{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #fff;
+}
+
+.container .remember__forgot{
+  display:flex;
+  justify-content: space-between;
+  font-size:14.5px;
+  margin:-15px 0 15px;
+}
+
+.remember__forgot label input{
+  accent-color: rgb(249, 247, 247);
+  margin-right: 3px;
+}
+
+.remember__forgot a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember__forgot a:hover{
+  text-decoration: underline;
+}
+
+.container .btn__inicio{
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(52, 52, 52);
+  font-weight: 600;
+}
 

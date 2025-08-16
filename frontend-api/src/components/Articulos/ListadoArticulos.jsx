@@ -31,7 +31,7 @@ function ListadoArticulos({Items, RegistrosTotal, Consultar, Modificar, ActivarD
                            <td className="table__content table__content--acciones">
 
                                <button className=" button__form-consultar" title="Consultar" onClick={()=>Consultar(item)}>
-                                    <img src={icono_consultar} alt="Consultar" className="icon"></img>
+                                    <img src={icono_consultar} alt="Consultar" className="icon"></img> 
                                 </button>
                                <button className="  button__form-modificar" title="Modificar" onClick={()=>Modificar(item)}>
                                     <img src={icono_modificar} alt="Modificar" className="icon"></img>

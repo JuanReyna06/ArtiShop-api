@@ -52,7 +52,10 @@ function Articulos(){
   async function BuscarPorId (item, accion){
       setAccionABMC(accion);
       const data = await servisArt.BuscarArticuloPorId(item);
-      console.log(data)
+      if (data.FechaAlta) {
+      data.FechaAlta = new Date(data.FechaAlta).toISOString().split("T")[0];
+      }
+      console.log(data);
       setItem(data);
   };
 
