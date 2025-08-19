@@ -8,7 +8,7 @@ import usuariosRoute from "./routes/usuariosRoute.js";
 import seguridadRoute from "./routes/seguridadRoute.js";
 
 const app = express();
-const port = 3000;
+// const port = 3000;
 
 app.use(
   cors({
@@ -35,10 +35,9 @@ try {
     console.error('❌ Error al inicializar la base de datos:', error);
 }
 
-
-// Iniciar el servidor
-app.listen(port, () => {
-  console.log(`Servidor iniciado en http://localhost:${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });
 
 export default app;
