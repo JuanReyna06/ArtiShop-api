@@ -70,8 +70,8 @@ async function createArticulo(req, res) {
         })
         res.status(201).json("articulo creado con exito : " , articulo);
     } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Error al crear el articulo' });
+        console.error("El error al crear aticulo es:" , error);
+        res.status(500).json({ message: "Error al crear articulo", error: err.message });
     }
     
 };
