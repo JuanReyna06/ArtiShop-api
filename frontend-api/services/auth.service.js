@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const api_url = "http://localhost:3000/artiShop/api"
+const api_url = import.meta.env.VITE_API_URL;
 
 //Guardar token en localStorage
 const setToken = (token) => {

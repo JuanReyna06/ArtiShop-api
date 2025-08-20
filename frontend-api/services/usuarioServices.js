@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authService from './auth.service.js';
 
-const apiUrl = "http://localhost:3000/artiShop/api/usuarios";
+const apiUrl =`${import.meta.env.VITE_API_URL}/usuarios`;
 
 const getUsuarios = async() => {
     const token = authService.getToken();
