@@ -14,7 +14,7 @@ export async function iniciarBaseDatos() {
     try{
         // Sincronizar la base de datos con el modelo
         //Crea la tabla si no existe, al agregar { force: true } se eliminan los datos existentes y se reinicializa la secuencia
-        await sequelize.sync({ force: true }); 
+        await sequelize.sync({ alter: true }); 
 
         //Incializacion de Articulos
         await inicializarArticulos();
