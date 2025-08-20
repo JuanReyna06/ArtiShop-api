@@ -4,7 +4,7 @@ Proyecto de gestión de artículos y categorías con **Node.js**, **Express**, *
 
 ## 🚀 Tecnologías utilizadas
 - Node.js + Express
-- Sequelize ORM + SQLite
+- Sequelize ORM + SQLite --> Migrando a PostgreSQL
 - React.js (Frontend separado) + Axios
 - JWT para autenticación
 - CORS habilitado para desarrollo
