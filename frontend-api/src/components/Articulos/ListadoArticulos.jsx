@@ -7,7 +7,7 @@ import icono_desactivar from "../../assets/icons/cruz.svg"
 
 function ListadoArticulos({Items, RegistrosTotal, Consultar, Modificar, ActivarDesactivar, Pagina, Buscar, Paginas, Imprimir}) {
     return (
-        <div className="table-responsive">
+        <div className="table__responsive">
             <table className="table">
                 <thead className="table__head">
                     <tr className="table__row">

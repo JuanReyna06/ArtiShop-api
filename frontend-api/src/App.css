@@ -212,6 +212,10 @@ body {
 }
 
 /*--- Categoria.jsx ---*/
+.table__responsive {
+  width: 100%;
+  overflow-x: auto;
+}
 
 .title__table {
   font-family: sans-serif;
@@ -233,6 +237,7 @@ table{
   margin: 0px auto 30px auto;
   overflow: hidden;
   border-top: 2px solid #515151;
+  min-width: 600px;
 }
 
 .table__content{
@@ -578,3 +583,90 @@ fieldset{
   font-weight: 600;
 }
 
+/* ========================= */
+/* ====== MEDIA QUERIES ==== */
+/* ========================= */
+
+/* Tablet y móvil */
+@media (max-width: 768px) {
+  .header__title {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
+  .card {
+    padding: 15px 20px;
+  }
+
+  .card__title {
+    font-size: 28px;
+  }
+
+  .form__registrar {
+    width: 100%; /* antes fijo en 700px */
+    margin: 10px;
+  }
+
+  .title__table {
+    font-size: 22px;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+
+  .table__content,
+  .table__cell {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .form__input-container {
+    flex-direction: column; /* inputs apilados en móviles */
+    gap: 8px;
+  }
+
+  .nav-var {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav__link,
+  .nav__button {
+    width: 90%;
+    text-align: center;
+    margin: 4px 0;
+  }
+}
+
+/* Móviles chicos */
+@media (max-width: 480px) {
+  .form__button,
+  .card__button,
+  .button__form-imprimir,
+  .button__form-consultar,
+  .button__form-modificar,
+  .button__form-activar,
+  .button__form-desactivar {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .login__container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login__container h2 {
+    font-size: 28px;
+  }
+
+  .input__box input {
+    font-size: 16px;
+  }
+}
