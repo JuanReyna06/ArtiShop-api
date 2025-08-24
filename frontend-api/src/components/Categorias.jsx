@@ -14,8 +14,8 @@ function Categorias (){
     return(
         <>
         <div className="title__table">Categorias</div>
-        
-        <table className="table">   
+        <div className='table__responsive'>
+            <table className="table">   
             <thead className='table__head'>
                     <tr className='table__row'>
                         <th className='table__cell'>ID</th>
@@ -33,6 +33,8 @@ function Categorias (){
 
             </tbody>
         </table>
+        </div>
+        
     
     </>
     )
